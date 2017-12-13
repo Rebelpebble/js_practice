@@ -1,14 +1,14 @@
-const reverseString = function(stringToReverse) {
+function reverseString (stringToReverse) {
   const stringList = stringToReverse.split('');
   const reversedStringList = [];
-  stringList.forEach(function(letter) {
+  stringList.forEach(letter => {
     reversedStringList.unshift(letter);
   })
 
   return reversedStringList.join('');
 };
 
-const printReversedString = function(stringToPrintBackwards) {
+function printReversedString (stringToPrintBackwards) {
   console.log(reverseString(stringToPrintBackwards));
 }
 
