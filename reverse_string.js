@@ -1,8 +1,3 @@
-const stringToList = function(stringUnlisted) {
-  const stringList = stringUnlisted.split('');
-  return stringList;
-}
-
 const reverseString = function(stringListToReverse) {
   const reversedStringList = [];
   stringListToReverse.forEach(function(letter) {
@@ -13,7 +8,7 @@ const reverseString = function(stringListToReverse) {
 };
 
 const printReversedString = function(stringToPrint) {
-  const stringList = stringToList(stringToPrint);
+  const stringList = stringToPrint.split('');
   console.log(reverseString(stringList).join(''));
 }
 
