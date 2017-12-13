@@ -4,12 +4,12 @@ const reverseString = function(stringListToReverse) {
     reversedStringList.unshift(letter);
   })
 
-  return reversedStringList;
+  return reversedStringList.join('');
 };
 
 const printReversedString = function(stringToPrint) {
   const stringList = stringToPrint.split('');
-  console.log(reverseString(stringList).join(''));
+  console.log(reverseString(stringList));
 }
 
 printReversedString('Hello my name is Brian.');
