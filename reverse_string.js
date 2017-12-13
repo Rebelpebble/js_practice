@@ -1,12 +1,5 @@
 const stringToList = function(stringUnlisted) {
-  let iterator = 0;
-  const stringList = [];
-
-  while (stringUnlisted.length - 1 >= stringList.length) {
-    stringList.push(stringUnlisted[iterator])
-    iterator += 1;
-  }
-
+  const stringList = stringUnlisted.split('');
   return stringList;
 }
 
