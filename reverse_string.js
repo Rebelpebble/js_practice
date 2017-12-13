@@ -1,15 +1,15 @@
-const reverseString = function(stringListToReverse) {
+const reverseString = function(stringToReverse) {
+  const stringList = stringToReverse.split('');
   const reversedStringList = [];
-  stringListToReverse.forEach(function(letter) {
+  stringList.forEach(function(letter) {
     reversedStringList.unshift(letter);
   })
 
   return reversedStringList.join('');
 };
 
-const printReversedString = function(stringToPrint) {
-  const stringList = stringToPrint.split('');
-  console.log(reverseString(stringList));
+const printReversedString = function(stringToPrintBackwards) {
+  console.log(reverseString(stringToPrintBackwards));
 }
 
 printReversedString('Hello my name is Brian.');
