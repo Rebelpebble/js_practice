@@ -1,4 +1,4 @@
-function reverseString (stringToReverse) {
+function reverseString(stringToReverse) {
   const stringList = stringToReverse.split('');
   const reversedStringList = [];
   stringList.forEach(letter => {
@@ -8,7 +8,7 @@ function reverseString (stringToReverse) {
   return reversedStringList.join('');
 };
 
-function printReversedString (stringToPrintBackwards) {
+function printReversedString(stringToPrintBackwards) {
   console.log(reverseString(stringToPrintBackwards));
 }
 
