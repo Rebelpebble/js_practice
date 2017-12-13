@@ -6,7 +6,7 @@ function reverseString(stringToReverse) {
   })
 
   return reversedStringList.join('');
-};
+}
 
 function printReversedString(stringToPrintBackwards) {
   console.log(reverseString(stringToPrintBackwards));
