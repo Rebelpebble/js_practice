@@ -1,17 +1,12 @@
-function reverseString(stringToReverse) {
-  const stringList = stringToReverse.split('');
-  const reversedStringList = [];
-  stringList.forEach(letter => {
-    reversedStringList.unshift(letter);
+function reverseString(stringForward) {
+  const stringReversed = [];
+  stringForward.split('').forEach(function(letter) {
+    stringReversed.unshift(letter);
   })
 
-  return reversedStringList.join('');
+  console.log(stringReversed.join(''));
 }
 
-function printReversedString(stringToPrintBackwards) {
-  console.log(reverseString(stringToPrintBackwards));
-}
-
-printReversedString('Hello my name is Brian.');
-printReversedString('I am 23 years old.');
-printReversedString('This is my first JS program.');
+reverseString("Hello my name is Brian.");
+reverseString("I am 23 years old.");
+reverseString("This is my first JS program.");
