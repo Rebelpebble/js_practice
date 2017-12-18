@@ -1,20 +1,19 @@
 function isPalindrome(word) {
   const wordSplit = word.split('')
+  const halfWay = wordSplit.length / 2
+  let leftSide = 0
+  let rightSide = wordSplit.length - 1
 
-  if (checkEachLetter(wordSplit)) {
+  while (wordSplit[leftSide] === wordSplit[rightSide] && leftSide !== rightSide) {
+    leftSide += 1
+    rightSide -= 1
+  }
+
+  if (leftSide === rightSide) {
     return true
   } else {
     return false
   }
 }
 
-function checkEachLetter(letters) {
-  let otherSide = letters.length - 1
-  letters.forEach(letter => {
-    if (letter !== letters[otherSide]) {
-      return false
-    }
-  })
-}
-
-console.log(isPalindrome('eye'))
+console.log(isPalindrome('racecar'))
