@@ -1,19 +1,8 @@
 function isPalindrome(word) {
   const wordSplit = word.split('')
-  const halfWay = wordSplit.length / 2
-  let leftSide = 0
-  let rightSide = wordSplit.length - 1
+  const wordSplitBackwards = word.split('').reverse()
 
-  while (wordSplit[leftSide] === wordSplit[rightSide] && leftSide !== rightSide) {
-    leftSide += 1
-    rightSide -= 1
-  }
-
-  if (leftSide === rightSide) {
-    return true
-  } else {
-    return false
-  }
+  return wordSplit === wordSplitBackwards
 }
 
 console.log(isPalindrome('racecar'))
