@@ -11,7 +11,11 @@ class Weapons {
 
   printWeaponInformation() {
     console.log("This is a:" + this._model + "that uses" + this._ammo)
-    }
+  }
+
+  get serialNumber() {
+    return this._serialNumber
+  }
 
   static generateSerialNumber() {
     this._serialNumber = Math.floor(Math.random() * 10000)
@@ -30,4 +34,5 @@ class AssultRifle extends Weapons {
 }
 
 const briansGun = new AssultRifle('AK47', 7.62, 50)
-briansGun.generateSerialNumber()
+briansGun.super.generateSerialNumber()
+briansGun.serialNumber()
